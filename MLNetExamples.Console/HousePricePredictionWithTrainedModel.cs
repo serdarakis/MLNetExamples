@@ -11,10 +11,10 @@ public static class HousePricePredictionWithTrainedModel
         
         HouseData[] houseData =
         [
-            new() { Size = 1.1F, Price = 1.2F },
-            new() { Size = 1.9F, Price = 2.3F },
-            new() { Size = 2.8F, Price = 3.0F },
-            new() { Size = 3.4F, Price = 3.7F }
+            new() { Size = 100F, Price = 1.2F },
+            new() { Size = 115.5F, Price = 1.9F },
+            new() { Size = 86F, Price = 1.0F },
+            new() { Size = 98.8F, Price = 1.2F }
         ];
         IDataView trainingData = mlContext.Data.LoadFromEnumerable(houseData);
 
@@ -31,7 +31,7 @@ public static class HousePricePredictionWithTrainedModel
         mlContext.Model.Save(model, trainingData.Schema, "HousePriceModel.zip");
     }
     
-    public static void Predict(float size)
+    public static float Predict(float size)
     {
         // 1. Load model
         var mlContext = new MLContext();
@@ -41,6 +41,6 @@ public static class HousePricePredictionWithTrainedModel
         var houseSize = new HouseData { Size = size };
         var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(houseSize);
 
-        Console.WriteLine($"Predicted price for size: {houseSize.Size} = {price.Price * 100:C}k");
+        return price.Price;
     }
 }
