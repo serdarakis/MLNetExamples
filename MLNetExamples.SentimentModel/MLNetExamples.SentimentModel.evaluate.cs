@@ -6,9 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SentimentModel.ConsoleApp
+namespace MLNetExamples.SentimentModel.ConsoleApp
 {
-    public partial class SentimentModel
+    public partial class MLNetExamples_SentimentModel
     {
         /// <summary>
         /// Permutation feature importance (PFI) is a technique to determine the importance 

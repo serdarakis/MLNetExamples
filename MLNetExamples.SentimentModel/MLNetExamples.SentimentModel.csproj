@@ -6,8 +6,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
   </ItemGroup>
-  <ItemGroup Label="SentimentModel">
-    <None Include="SentimentModel.mlnet">
+  <ItemGroup Label="MLNetExamples.SentimentModel">
+    <None Include="MLNetExamples.SentimentModel.mlnet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

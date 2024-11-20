@@ -5,12 +5,12 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-namespace SentimentModel.ConsoleApp
+namespace MLNetExamples.SentimentModel.ConsoleApp
 {
-    public partial class SentimentModel
+    public partial class MLNetExamples_SentimentModel
     {
         /// <summary>
-        /// model input class for SentimentModel.
+        /// model input class for MLNetExamples_SentimentModel.
         /// </summary>
         #region model input class
         public class ModelInput
@@ -28,7 +28,7 @@ namespace SentimentModel.ConsoleApp
         #endregion
 
         /// <summary>
-        /// model output class for SentimentModel.
+        /// model output class for MLNetExamples_SentimentModel.
         /// </summary>
         #region model output class
         public class ModelOutput
@@ -52,7 +52,7 @@ namespace SentimentModel.ConsoleApp
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("SentimentModel.mlnet");
+        private static string MLNetModelPath = Path.GetFullPath("MLNetExamples.SentimentModel.mlnet");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 
