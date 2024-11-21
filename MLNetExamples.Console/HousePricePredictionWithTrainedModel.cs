@@ -1,6 +1,5 @@
 namespace MLNetExamples.Console;
 
-using System;
 using Microsoft.ML;
 
 public static class HousePricePredictionWithTrainedModel
