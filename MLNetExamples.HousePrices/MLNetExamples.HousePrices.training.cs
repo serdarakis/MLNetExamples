@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
+using Microsoft.ML.Trainers.FastTree;
 
-namespace MLNetExamples.SentimentModel.ConsoleApp
+namespace MLNetExamples.HousePrices.ConsoleApp
 {
-    public partial class MLNetExamples_SentimentModel
+    public partial class MLNetExamples_HousePrices
     {
-        public const string RetrainFilePath =  @"/Users/1000064565/Documents/Repositories/MLNetExamples/yelp_labelled.txt";
-        public const char RetrainSeparatorChar = '	';
-        public const bool RetrainHasHeader =  false;
+        public const string RetrainFilePath =  @"/Users/1000064565/Documents/Repositories/MLNetExamples/house_prices.csv";
+        public const char RetrainSeparatorChar = ',';
+        public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
 
          /// <summary>
@@ -89,11 +90,9 @@ namespace MLNetExamples.SentimentModel.ConsoleApp
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"col0",outputColumnName:@"col0")      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"col0"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"col1",inputColumnName:@"col1",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(new LbfgsMaximumEntropyMulticlassTrainer.Options(){L1Regularization=0.03125F,L2Regularization=0.03125F,LabelColumnName=@"col1",FeatureColumnName=@"Features"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
+            var pipeline = mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"Size", @"Size"),new InputOutputColumnPair(@"Bedrooms", @"Bedrooms"),new InputOutputColumnPair(@"Bathrooms", @"Bathrooms"),new InputOutputColumnPair(@"YearBuilt", @"YearBuilt")})      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Size",@"Bedrooms",@"Bathrooms",@"YearBuilt"}))      
+                                    .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"Price",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

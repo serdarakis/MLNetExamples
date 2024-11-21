@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLNetExamples.Console", "ML
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLNetExamples.SentimentModel", "MLNetExamples.SentimentModel\MLNetExamples.SentimentModel.csproj", "{8ECCC180-002E-4BF7-8210-178E45A3F573}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLNetExamples.HousePrices", "MLNetExamples.HousePrices\MLNetExamples.HousePrices.csproj", "{6A563F66-9A2A-4534-9D5C-5400B6CDD73E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{8ECCC180-002E-4BF7-8210-178E45A3F573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ECCC180-002E-4BF7-8210-178E45A3F573}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ECCC180-002E-4BF7-8210-178E45A3F573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A563F66-9A2A-4534-9D5C-5400B6CDD73E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A563F66-9A2A-4534-9D5C-5400B6CDD73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A563F66-9A2A-4534-9D5C-5400B6CDD73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A563F66-9A2A-4534-9D5C-5400B6CDD73E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

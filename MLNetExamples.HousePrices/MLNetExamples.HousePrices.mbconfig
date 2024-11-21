@@ -1,0 +1,256 @@
+{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "/Users/1000064565/Documents/Repositories/MLNetExamples/house_prices.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Size",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Bedrooms",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Bathrooms",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "YearBuilt",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Price",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.0,
+        "RuntimeInSeconds": 0.09,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.0,
+        "RuntimeInSeconds": 0.012,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.0,
+        "RuntimeInSeconds": 0.018,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.09999999999999998,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.0,
+        "RuntimeInSeconds": 0.012,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 5,
+            "NumberOfLeaves": 6,
+            "FeatureFraction": 0.92145324,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "FastTreeRegression",
+      "e3": "FastForestRegression",
+      "e4": "LightGbmRegression",
+      "e5": "LbfgsPoissonRegressionRegression",
+      "e6": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5 + e6)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "/Users/1000064565/Documents/Repositories/MLNetExamples/MLNetExamples.HousePrices/MLNetExamples.HousePrices.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 10,
+    "LabelColumn": "Price",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.1
+    }
+  }
+}
