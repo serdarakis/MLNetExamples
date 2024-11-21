@@ -12,21 +12,21 @@ namespace MLNetExamples.HousePrices.ConsoleApp
             // Create single instance of sample data from first line of dataset for model input
             MLNetExamples_HousePrices.ModelInput sampleData = new MLNetExamples_HousePrices.ModelInput()
             {
-                Size = 1200F,
+                Size = 2100F,
                 Bedrooms = 3F,
-                Bathrooms = 2F,
-                YearBuilt = 2005F,
+                Bathrooms = 3F,
+                YearBuilt = 2003F,
             };
 
 
             Console.WriteLine("Using model to make single prediction -- Comparing actual Price with predicted Price from sample data...\n\n");
 
 
-            Console.WriteLine($"Size: {1200F}");
+            Console.WriteLine($"Size: {2100F}");
             Console.WriteLine($"Bedrooms: {3F}");
-            Console.WriteLine($"Bathrooms: {2F}");
-            Console.WriteLine($"YearBuilt: {2005F}");
-            Console.WriteLine($"Price: {250000F}");
+            Console.WriteLine($"Bathrooms: {3F}");
+            Console.WriteLine($"YearBuilt: {2003F}");
+            Console.WriteLine($"Price: {277000F}");
 
 
             // Make a single prediction on the sample data and print results

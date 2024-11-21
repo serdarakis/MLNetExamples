@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
-using Microsoft.ML.Trainers.FastTree;
 
 namespace MLNetExamples.HousePrices.ConsoleApp
 {
@@ -92,7 +91,7 @@ namespace MLNetExamples.HousePrices.ConsoleApp
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"Size", @"Size"),new InputOutputColumnPair(@"Bedrooms", @"Bedrooms"),new InputOutputColumnPair(@"Bathrooms", @"Bathrooms"),new InputOutputColumnPair(@"YearBuilt", @"YearBuilt")})      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Size",@"Bedrooms",@"Bathrooms",@"YearBuilt"}))      
-                                    .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"Price",FeatureColumnName=@"Features"}));
+                                    .Append(mlContext.Regression.Trainers.LbfgsPoissonRegression(new LbfgsPoissonRegressionTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"Price",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

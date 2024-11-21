@@ -23,7 +23,7 @@
         "ColumnName": "Bedrooms",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
-        "IsCategorical": false,
+        "IsCategorical": true,
         "Type": "Column",
         "Version": 5
       },
@@ -31,7 +31,7 @@
         "ColumnName": "Bathrooms",
         "ColumnPurpose": "Feature",
         "ColumnDataFormat": "Single",
-        "IsCategorical": false,
+        "IsCategorical": true,
         "Type": "Column",
         "Version": 5
       },
@@ -64,9 +64,128 @@
       {
         "Version": 1,
         "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.9144382551531752,
+        "RuntimeInSeconds": 0.022,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
         "TrainerName": "FastForestRegression",
-        "Score": 0.0,
-        "RuntimeInSeconds": 0.09,
+        "Score": 0.8631921493043258,
+        "RuntimeInSeconds": 0.016,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 7,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.94547385,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.8295512590074191,
+        "RuntimeInSeconds": 0.015,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Size",
+              "Bedrooms",
+              "Bathrooms",
+              "YearBuilt"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 8,
+            "NumberOfLeaves": 5,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Price",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.8256268786479616,
+        "RuntimeInSeconds": 0.108,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e3",
           "e0": {
@@ -105,7 +224,7 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastForestRegression",
-        "Score": 0.0,
+        "Score": 0.8256268786479616,
         "RuntimeInSeconds": 0.012,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e3",
@@ -134,92 +253,8 @@
           },
           "e3": {
             "NumberOfTrees": 4,
-            "NumberOfLeaves": 4,
-            "FeatureFraction": 1.0,
-            "LabelColumnName": "Price",
-            "FeatureColumnName": "Features"
-          }
-        }
-      },
-      {
-        "Version": 1,
-        "Type": "Trial",
-        "TrainerName": "FastTreeRegression",
-        "Score": 0.0,
-        "RuntimeInSeconds": 0.018,
-        "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2",
-          "e0": {
-            "OutputColumnNames": [
-              "Size",
-              "Bedrooms",
-              "Bathrooms",
-              "YearBuilt"
-            ],
-            "InputColumnNames": [
-              "Size",
-              "Bedrooms",
-              "Bathrooms",
-              "YearBuilt"
-            ]
-          },
-          "e1": {
-            "InputColumnNames": [
-              "Size",
-              "Bedrooms",
-              "Bathrooms",
-              "YearBuilt"
-            ],
-            "OutputColumnName": "Features"
-          },
-          "e2": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 20,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 254,
-            "FeatureFraction": 1.0,
-            "LearningRate": 0.09999999999999998,
-            "LabelColumnName": "Price",
-            "FeatureColumnName": "Features",
-            "DiskTranspose": false
-          }
-        }
-      },
-      {
-        "Version": 1,
-        "Type": "Trial",
-        "TrainerName": "FastForestRegression",
-        "Score": 0.0,
-        "RuntimeInSeconds": 0.012,
-        "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e3",
-          "e0": {
-            "OutputColumnNames": [
-              "Size",
-              "Bedrooms",
-              "Bathrooms",
-              "YearBuilt"
-            ],
-            "InputColumnNames": [
-              "Size",
-              "Bedrooms",
-              "Bathrooms",
-              "YearBuilt"
-            ]
-          },
-          "e1": {
-            "InputColumnNames": [
-              "Size",
-              "Bedrooms",
-              "Bathrooms",
-              "YearBuilt"
-            ],
-            "OutputColumnName": "Features"
-          },
-          "e3": {
-            "NumberOfTrees": 5,
             "NumberOfLeaves": 6,
-            "FeatureFraction": 0.92145324,
+            "FeatureFraction": 1.0,
             "LabelColumnName": "Price",
             "FeatureColumnName": "Features"
           }

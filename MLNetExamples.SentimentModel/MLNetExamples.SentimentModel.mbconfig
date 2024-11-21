@@ -41,8 +41,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.8612579281183932,
-        "RuntimeInSeconds": 0.204,
+        "Score": 0.8723572938689218,
+        "RuntimeInSeconds": 0.134,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
           "e0": {
@@ -65,8 +65,8 @@
             "AddKeyValueAnnotationsAsText": false
           },
           "e7": {
-            "L1Regularization": 0.03125,
-            "L2Regularization": 0.03125,
+            "L1Regularization": 0.03680985,
+            "L2Regularization": 0.35874343,
             "LabelColumnName": "col1",
             "FeatureColumnName": "Features"
           }
@@ -76,8 +76,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.8612579281183932,
-        "RuntimeInSeconds": 0.291,
+        "Score": 0.8723572938689218,
+        "RuntimeInSeconds": 0.034,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
           "e0": {
@@ -101,42 +101,7 @@
           },
           "e7": {
             "L1Regularization": 0.03125,
-            "L2Regularization": 0.03125,
-            "LabelColumnName": "col1",
-            "FeatureColumnName": "Features"
-          }
-        }
-      },
-      {
-        "Version": 1,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.8607293868921776,
-        "RuntimeInSeconds": 0.15,
-        "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e6 * e10",
-          "e0": {
-            "InputColumnName": "col0",
-            "OutputColumnName": "col0"
-          },
-          "e1": {
-            "InputColumnNames": [
-              "col0"
-            ],
-            "OutputColumnName": "Features"
-          },
-          "e10": {
-            "OutputColumnName": "PredictedLabel",
-            "InputColumnName": "PredictedLabel"
-          },
-          "e2": {
-            "OutputColumnName": "col1",
-            "InputColumnName": "col1",
-            "AddKeyValueAnnotationsAsText": false
-          },
-          "e6": {
-            "L1Regularization": 0.28529254,
-            "L2Regularization": 0.03125,
+            "L2Regularization": 0.4325894,
             "LabelColumnName": "col1",
             "FeatureColumnName": "Features"
           }
@@ -146,8 +111,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.8607293868921776,
-        "RuntimeInSeconds": 0.029,
+        "Score": 0.8723572938689218,
+        "RuntimeInSeconds": 0.043,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
           "e0": {
@@ -170,8 +135,8 @@
             "AddKeyValueAnnotationsAsText": false
           },
           "e7": {
-            "L1Regularization": 0.03125,
-            "L2Regularization": 0.658112,
+            "L1Regularization": 0.035705883,
+            "L2Regularization": 0.4709468,
             "LabelColumnName": "col1",
             "FeatureColumnName": "Features"
           }
@@ -181,8 +146,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.849630021141649,
-        "RuntimeInSeconds": 0.131,
+        "Score": 0.8723572938689218,
+        "RuntimeInSeconds": 0.034,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
           "e0": {
@@ -205,8 +170,43 @@
             "AddKeyValueAnnotationsAsText": false
           },
           "e7": {
-            "L1Regularization": 0.03125,
-            "L2Regularization": 0.15859905,
+            "L1Regularization": 0.03996043,
+            "L2Regularization": 0.42227203,
+            "LabelColumnName": "col1",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.8723572938689218,
+        "RuntimeInSeconds": 0.036,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "e0": {
+            "InputColumnName": "col0",
+            "OutputColumnName": "col0"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "col0"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "col1",
+            "InputColumnName": "col1",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e7": {
+            "L1Regularization": 0.032597624,
+            "L2Regularization": 0.3563857,
             "LabelColumnName": "col1",
             "FeatureColumnName": "Features"
           }
